@@ -1,0 +1,14 @@
+<h1>CreateYou</h1>
+<p>Enter new opacity: <input type="text" id="inputBox" value=50></p>
+<button id="applyOpacity">Enter</button>
+<button id="exitPlugin">exit</button>
+<script>
+    document.getElementById('applyOpacity').onclick = () =>{
+        const inputBox = document.getElementById('inputBox');
+        const opacityValue = parseInt(InputBox,value,10);
+        parent.postMessage({pluginMessage:{type:'applyOpacity',opacityValue}}, '*');
+    }
+    document.getElementById('exitPlugin').onclick = () =>{
+        parent.postMessage({pluginMessage:{type:'exitPlugin'}}, '*');
+    }
+</script>

@@ -2,7 +2,7 @@
   "name": "test1-plugin-fpd",
   "id": "1430995169273290146",
   "api": "1.0.0",
-  "main": "code.js",
+  "main": "test.js",
   "capabilities": [],
   "enableProposedApi": false,
   "documentAccess": "dynamic-page",
@@ -10,7 +10,7 @@
     "figma",
     "figjam"
   ],
-  "ui": "ui.html",
+  "ui": "test.html",
   "networkAccess": {
     "allowedDomains": [
       "none"
