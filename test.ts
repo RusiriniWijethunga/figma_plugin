@@ -8,9 +8,16 @@ figma.ui.onmessage = msg =>{
     //     rect.cornerRadius=4;
     //     figma.currentPage.appendChild(rect);
     // }
-    for (const node of figma.currentPage.selection{
-        console.log.(node.type);
-    })
+    for (const node of figma.currentPage.selection){
+        //console.log(node.type);
+        for(let i=1;i<=9; i++){
+            const duplicate = node.clone();
+        duplicate.x = node.x + node.width + 150;
+        if("opacity" in duplicate)
+        duplicate.opacity = 0.9;
+        }
+        
+    }
     // else if(msg.type==='createEllipse'){
     //     if(msg.type === 'createEllipse'){
     //         const ellipse = figma.createEllipse();
