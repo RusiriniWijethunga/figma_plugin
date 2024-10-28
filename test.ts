@@ -10,12 +10,15 @@ figma.ui.onmessage = msg =>{
     // }
     for (const node of figma.currentPage.selection){
         //console.log(node.type);
-        for(let i=1;i<=9; i++){
-            const duplicate = node.clone();
-        duplicate.x = node.x + node.width + 150;
-        if("opacity" in duplicate)
-        duplicate.opacity = 0.9;
-        }
+        // for(let i=1;i<=9; i++){
+        //     const duplicate = node.clone();
+        // duplicate.x = node.x + node.width + 150;
+        // if("opacity" in duplicate)
+        // duplicate.opacity = 0.9;
+        // }
+        node.resize(400,400);
+        node.name = "This is " + node.type;
+    }
         
     }
     // else if(msg.type==='createEllipse'){
@@ -29,5 +32,4 @@ figma.ui.onmessage = msg =>{
     else if(msg.type === 'exitPlugin'){
         figma.closePlugin();
     }
-}
 }
